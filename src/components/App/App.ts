@@ -6,22 +6,42 @@ class App extends Component implements IComponent {
     super(document.body, "div", "container");
     this.title = title;
 
-    this.renderAppContainer();
+    this.headerAppContainer();
+    this.mainAppContainer();
   }
 
-  renderAppContainer(): void {
-    const appContainer = document.createElement("div");
-    appContainer.className = "container";
-    this.element.appendChild(appContainer);
-
+  headerAppContainer(): void {
     const headerContainer = document.createElement("header");
     headerContainer.className = "main-header";
-    appContainer.appendChild(headerContainer);
+    this.element.appendChild(headerContainer);
 
     const headerTitle = document.createElement("h1");
     headerTitle.className = "main-title";
     headerContainer.appendChild(headerTitle);
     headerTitle.textContent = this.title;
+  }
+
+  mainAppContainer(): void {
+    const mainContainer = document.createElement("main");
+    mainContainer.className = "main";
+    this.element.appendChild(mainContainer);
+
+    const sectionContainer = document.createElement("section");
+    sectionContainer.className = "series";
+    mainContainer.appendChild(sectionContainer);
+
+    const sectionTitleContainer = document.createElement("h2");
+    sectionTitleContainer.className = "section-title";
+    sectionContainer.appendChild(sectionTitleContainer);
+    sectionTitleContainer.textContent = "Series list";
+
+    const listPending = document.createElement("section");
+    listPending.className = "series-pending";
+    sectionContainer.appendChild(listPending);
+
+    const listWatched = document.createElement("section");
+    listWatched.className = "series-watched";
+    sectionContainer.appendChild(listWatched);
   }
 }
 export default App;
