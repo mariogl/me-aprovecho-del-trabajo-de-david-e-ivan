@@ -9,6 +9,7 @@ class FilmCard extends Component implements IComponent {
 
   render(): void {
     this.addImage();
+    this.addTitle();
   }
 
   addImage(): void {
@@ -17,6 +18,18 @@ class FilmCard extends Component implements IComponent {
     img.alt = `${this.filmData.name} poster`;
     img.src = this.filmData.poster;
     this.element.appendChild(img);
+  }
+
+  addTitle(): void {
+    const title = document.createElement("h4");
+    title.className = "serie__title";
+    title.textContent = `${this.filmData.name}`;
+    this.element.appendChild(title);
+
+    const infoData = document.createElement("p");
+    infoData.className = "serie__info";
+    infoData.textContent = `${this.filmData.creator} (${this.filmData.year})`;
+    this.element.appendChild(infoData);
   }
 }
 
