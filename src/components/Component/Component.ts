@@ -1,5 +1,6 @@
 import { IComponent } from "../interface.js";
 
+
 class Component implements IComponent {
   element: HTMLElement;
 
