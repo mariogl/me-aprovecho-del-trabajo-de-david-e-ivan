@@ -11,4 +11,5 @@ export interface FilmData {
   poster: string;
   watched: boolean;
   score: number;
+  emmies: number;
 }
