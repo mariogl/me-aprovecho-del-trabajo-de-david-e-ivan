@@ -1,4 +1,4 @@
-import IComponent from "../interface.js";
+import { IComponent } from "../interface.js";
 import Component from "../Component/Component.js";
 
 class App extends Component implements IComponent {
