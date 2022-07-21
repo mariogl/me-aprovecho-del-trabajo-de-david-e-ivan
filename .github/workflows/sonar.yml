@@ -1,4 +1,4 @@
-name: Sonar analysis
+name: Paquito chocolatero
 on:
   push:
     branches:
