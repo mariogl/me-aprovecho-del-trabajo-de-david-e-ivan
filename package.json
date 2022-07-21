@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest src --watchAll",
+    "test-coverage": "jest src --coverage",
     "ts-dev": "tsc -w",
     "ts-deploy": "tsc"
   },
@@ -20,10 +21,11 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
+    "jest-ts-webcompat-resolver": "^1.0.0",
     "ts-jest": "^28.0.7",
-    "typescript": "^4.7.4",
-    "husky": "^8.0.1"
+    "typescript": "^4.7.4"
   }
 }
