@@ -1,5 +1,5 @@
 import FilmCard from "./FilmCard";
-import films from "../../ts/films";
+import films from "../../series";
 
 describe("Given a component FilmCard", () => {
   describe("When instantiated with a body as parent", () => {

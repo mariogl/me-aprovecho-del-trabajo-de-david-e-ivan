@@ -1,5 +1,6 @@
 import { IComponent } from "../interface.js";
 import Component from "../Component/Component.js";
+import SectionLists from "../SectionList/SectionList.js";
 
 class App extends Component implements IComponent {
   constructor(private title: string) {
@@ -35,13 +36,24 @@ class App extends Component implements IComponent {
     sectionContainer.appendChild(sectionTitleContainer);
     sectionTitleContainer.textContent = "Series list";
 
-    const listPending = document.createElement("section");
-    listPending.className = "series-pending";
-    sectionContainer.appendChild(listPending);
+    new SectionLists(
+      sectionContainer,
+      "series-pending",
+      "Pending Series",
+      "You have 4 series pending to watch",
+      ""
+    );
 
     const listWatched = document.createElement("section");
     listWatched.className = "series-watched";
     sectionContainer.appendChild(listWatched);
+    new SectionLists(
+      sectionContainer,
+      "series-watched",
+      "Watched Series",
+      "You have watched 4 series",
+      "series-list--watched"
+    );
   }
 }
 export default App;
