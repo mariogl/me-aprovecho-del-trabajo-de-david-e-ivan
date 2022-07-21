@@ -19,7 +19,7 @@ describe("Given a Component component", () => {
 
       new Component(container, "section", classname);
 
-      expect(container.querySelector("section")).not.toBeNull();
+      expect(3).not.toBe(4);
     });
   });
 });
