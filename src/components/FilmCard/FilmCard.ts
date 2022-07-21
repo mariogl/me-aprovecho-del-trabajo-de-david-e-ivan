@@ -1,5 +1,5 @@
-import Component from "../Component/Component";
-import { IComponent, FilmData } from "../interface";
+import Component from "../Component/Component.js";
+import { IComponent, FilmData } from "../interface.js";
 
 class FilmCard extends Component implements IComponent {
   constructor(parent: HTMLElement, private filmData: FilmData) {
