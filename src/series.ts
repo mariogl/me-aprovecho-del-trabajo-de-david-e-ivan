@@ -1,4 +1,4 @@
-import { FilmData } from "../components/interface.js";
+import { FilmData } from "./components/interface.js";
 
 const series: FilmData[] = [
   {
