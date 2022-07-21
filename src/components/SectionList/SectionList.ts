@@ -34,6 +34,9 @@ class SectionLists extends Component implements IComponent {
     sectionList.className = `series-list ${this.listClass}`;
     this.element.appendChild(sectionList);
     new FilmCard(sectionList, series[0]);
+    new FilmCard(sectionList, series[1]);
+    new FilmCard(sectionList, series[2]);
+    new FilmCard(sectionList, series[3]);
   }
 }
 export default SectionLists;
